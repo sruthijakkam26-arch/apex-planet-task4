@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+header {
+    background: #173b68;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8fe3dc;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 15px;
+    background: linear-gradient(135deg, #d9f3ff, #e3e4ff);
+}
+
+.hero h2 {
+    color: #173b68;
+    margin-bottom: 10px;
+}
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #0000000d;
+}
+
+.section h2 {
+    color: #173b68;
+    margin-bottom: 18px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+    max-width: 100%;
+}
+
+#search {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    flex: 1;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.product {
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    padding: 18px;
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+}
+
+.product .emoji {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.product h3 {
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #087f5b;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #104a7a;
+}
+
+#productCount {
+    margin-top: 18px;
+    color: #64748b;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    min-width: 0;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 18px;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#taskList li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    color: #89939f;
+}
+
+.delete-btn {
+    background: #d94848;
+}
+
+.clear-btn {
+    background: #d94848;
+    margin-top: 15px;
+}
+
+.about p {
+    color: #526174;
+}
+
+footer {
+    background: #173b68;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+    #taskList li {
+        flex-wrap: wrap;
+    }
+}
